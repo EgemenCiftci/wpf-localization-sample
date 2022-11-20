@@ -1,0 +1,42 @@
+﻿<Window x:Class="WpfLocalizationSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:lex="http://wpflocalizeextension.codeplex.com"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        xmlns:local="clr-namespace:WpfLocalizationSample"
+        mc:Ignorable="d"
+        Title="MainWindow" 
+        Height="450" 
+        Width="800"
+        lex:LocalizeDictionary.DesignCulture="en"
+        lex:ResxLocalizationProvider.DefaultAssembly="WpfLocalizationSample"
+        lex:ResxLocalizationProvider.DefaultDictionary="Resources">
+    <Window.Resources>
+        <ObjectDataProvider x:Key="odp" MethodName="GetValues" ObjectType="{x:Type sys:Enum}">
+            <ObjectDataProvider.MethodParameters>
+                <x:Type TypeName="local:HelloWorld"/>
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+    </Window.Resources>
+    <StackPanel>
+        <ComboBox ItemsSource="{Binding MergedAvailableCultures, Source={x:Static lex:LocalizeDictionary.Instance}}" SelectedItem="{Binding Culture, Source={x:Static lex:LocalizeDictionary.Instance}}" DisplayMemberPath="NativeName"/>
+        <Label Content="{lex:Loc Label_Content}"/>
+        <Label x:Name="Label" Content="{lex:Loc}"/>
+        <ComboBox ItemsSource="{Binding Items, RelativeSource={RelativeSource AncestorType=Window}}" SelectedIndex="0">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{lex:Loc {Binding}}"/>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <ComboBox ItemsSource="{Binding Source={StaticResource odp}}" SelectedIndex="0">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{lex:Loc {Binding Converter={lex:PrependTypeConverter}}}"/>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+    </StackPanel>
+</Window>
