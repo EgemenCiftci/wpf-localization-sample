@@ -63,24 +63,6 @@ namespace WpfLocalizationSample.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Hello.
         /// </summary>
-        internal static string HelloWorld_Hello {
-            get {
-                return ResourceManager.GetString("HelloWorld_Hello", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to World.
-        /// </summary>
-        internal static string HelloWorld_World {
-            get {
-                return ResourceManager.GetString("HelloWorld_World", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Hello.
-        /// </summary>
         internal static string Item0 {
             get {
                 return ResourceManager.GetString("Item0", resourceCulture);
@@ -102,6 +84,24 @@ namespace WpfLocalizationSample.Properties {
         internal static string Label_Content {
             get {
                 return ResourceManager.GetString("Label_Content", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hello.
+        /// </summary>
+        internal static string SampleEnum_Hello {
+            get {
+                return ResourceManager.GetString("SampleEnum_Hello", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to World.
+        /// </summary>
+        internal static string SampleEnum_World {
+            get {
+                return ResourceManager.GetString("SampleEnum_World", resourceCulture);
             }
         }
     }

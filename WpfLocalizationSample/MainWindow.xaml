@@ -16,7 +16,7 @@
     <Window.Resources>
         <ObjectDataProvider x:Key="odp" MethodName="GetValues" ObjectType="{x:Type sys:Enum}">
             <ObjectDataProvider.MethodParameters>
-                <x:Type TypeName="local:HelloWorld"/>
+                <x:Type TypeName="local:SampleEnum"/>
             </ObjectDataProvider.MethodParameters>
         </ObjectDataProvider>
     </Window.Resources>

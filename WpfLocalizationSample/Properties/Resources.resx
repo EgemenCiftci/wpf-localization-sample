@@ -117,12 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="HelloWorld_Hello" xml:space="preserve">
-    <value>Hello</value>
-  </data>
-  <data name="HelloWorld_World" xml:space="preserve">
-    <value>World</value>
-  </data>
   <data name="Item0" xml:space="preserve">
     <value>Hello</value>
   </data>
@@ -131,5 +125,11 @@
   </data>
   <data name="Label_Content" xml:space="preserve">
     <value>Hello World!</value>
+  </data>
+  <data name="SampleEnum_Hello" xml:space="preserve">
+    <value>Hello</value>
+  </data>
+  <data name="SampleEnum_World" xml:space="preserve">
+    <value>World</value>
   </data>
 </root>

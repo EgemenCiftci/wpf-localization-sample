@@ -1,6 +1,6 @@
 ﻿namespace WpfLocalizationSample;
 
-public enum HelloWorld
+public enum SampleEnum
 {
     Hello,
     World
